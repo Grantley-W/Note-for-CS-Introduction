@@ -1,6 +1,8 @@
 # Note for Introduction of Conmputer Science
 <div align = right>By Grantley-W in CEO of NKU.</div align = right>
 
+[toc]
+
 ```
 写在前面：
 本笔记标号统一采用以下顺序：一、1.  (1)
