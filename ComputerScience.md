@@ -118,7 +118,9 @@ print(Student_Obj.name)
 概念：当输入规模趋于无穷时，程序时间的增长量级 
 运算性质：对于顺序结构，T(n) = O[max(f(n),g(n))]
 选择结构：取决于then或else语句执行次数
-循环结构：T(n) = O(f(n)xg(n))
+循环结构：T(n) = O(f(n) x g(n))
+
+
 
 
 
