@@ -105,7 +105,7 @@ print(Student_Obj.name)
 基本操作：push pop empty
 实现方法：数组/链表
 应用：数据的倒转、进制转换  **迷宫问题** 
-（迷宫问题算法必须掌握）
+（==迷宫问题算法掌握==）
 
 2. 队列：queue 先进先出数据结构。数据只能在尾部插入，头部删除。
 基本操作：入列、出列
@@ -115,10 +115,50 @@ print(Student_Obj.name)
 基本操作：插入、删除、遍历、检索
 
 ### 7 算法复杂度
-概念：当输入规模趋于无穷时，程序时间的增长量级 
-运算性质：对于顺序结构，T(n) = O[max(f(n),g(n))]
-选择结构：取决于then或else语句执行次数
-循环结构：T(n) = O(f(n) x g(n))
+概念：当输入规模趋于无穷时，程序时间、空间的增长量级 
+运算性质：
+- 对于顺序结构，T(n) = O[max(f(n),g(n))]
+- 选择结构：取决于then或else语句执行次数
+- 循环结构：T(n) = O(f(n) x g(n))
+
+### 8 经典算法思想
+#### （1）递归
+核心思想：从n层整体问题中隐去部分问题，再判断剩余部分是否为n-1层。如果是，则为递归结构
+
+*经典例子：斐波那契数列问题*
+```
+# F(n) = F(n-1) + F(n-2)
+def fbnq_func(n):
+  if (n == 1 or n == 2):return 1
+  else return fbnq_func(n-1) + fbnq_func(n-2)
+```
+
+*PPT例题：仅使用append()和len()Merge两个列表：*
+
+```
+# merge(L1,L2)
+final_list = []
+def Merge(L1,L2):
+    global final_list
+    if len(L1) == 0: final_list = final_list + L2;return
+    if len(L2) == 0:final_list = final_list + L1;return
+    else:
+        if L1[0] <= L2[0]: 
+            final_list.append(L1[0])
+            Merge(L1[1:],L2)
+        elif L1[0] > L2[0]:
+            final_list.append(L2[0])
+            Merge(L1,L2[1:])
+
+list1 = [1,2,3]
+list2 = [-6,-3,4,9]
+Merge(list1,list2)
+print(final_list)
+```
+
+
+
+
 
 
 
