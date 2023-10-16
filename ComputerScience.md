@@ -155,9 +155,14 @@ list2 = [-6,-3,4,9]
 Merge(list1,list2)
 print(final_list)
 ```
+#### （2）分治
+利用二分法的思想，将大的问题转换成两个小问题
+例如：取一个数组的最小值：
+```
+Min_Func(1,n) = min(Min_Func(1,n/2),Min_Func(n/2+1,n))
+```
 
-
-
+#### （3）贪心算法
 
 
 
